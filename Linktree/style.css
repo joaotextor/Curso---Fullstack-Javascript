@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    background: #020024;
+    background: linear-gradient(0deg, #3498db 0%, rgba(44,62,80,1) 30%, rgba(2,0,36,1) 100%);
+    color:#ebf7ff;
+    font-family: 'Raleway', sans-serif;
+}
+
+.profile {
+    margin: 30px auto;
+    margin-bottom: 0;
+    height: auto;
+    text-align: center;
+}
+
+.avatar {
+    width: 120px;
+    border-radius: 50%;
+    border-style: solid;
+    border-color: #ebf7ff;
+    border-width: 0px;
+    padding: 2px;
+    box-shadow: 0 0 7px #ebf7ff;
+}
+
+.social {
+    display: flex;
+    justify-content: space-around; /* Só funciona quando o flex estiver ativo*/
+    list-style: none;
+    margin: 20px 10px;   
+}
+
+.social img {
+    width: 40px;
+    border-radius: 50%;
+    box-shadow: 0 0 3px #ebf7ff;
+    
+}
+
+h1 {
+    font-family: 'Maitree', serif;
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+h2 {
+    font-family: 'Maitree', serif;
+    margin-top: 0;
+    font-size: 20px;
+};
+
+.lista-links {
+    list-style: none;
+}
+
+.lista-links li {
+    list-style: none;
+    margin: 10px 40px;
+    padding: 0 20px;
+    background: white;
+    margin-bottom: 10px;
+    border-style: solid;;
+    border-radius: 10px 10px 10px 10px;
+    box-shadow: 0 0 10px white;
+}
+
+.lista-links li a {
+    text-decoration: none;
+    display: block;
+    padding-bottom: 10px;
+}
+
+.lista-links li a span {
+    margin: 10px 0 10px 0;
+    display: block;
+    color: #3498db;
+    font-weight: bold;
+}
