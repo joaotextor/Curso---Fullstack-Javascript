@@ -1,0 +1,109 @@
+body {
+    background: #4ba8ff7a;
+    /* background-image: url(bg.jpg);  */
+    background-repeat: no-repeat;
+    /* background-position: 100% 10%; */
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'PT Sans', sans-serif;
+    color: #192a56;
+    margin: 0;
+}
+
+.container {
+    width: 1000px;
+    height: auto;
+    margin: 0 auto;
+}
+
+.profile {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.social-icons {
+    width: 30px;
+}
+
+.contact-icon {
+    width: 43px;
+}
+
+.instagram {
+    margin: 0 20px;
+}
+
+.job-list {
+    list-style: none;
+    padding-left: 20px;
+}
+
+.social-links {
+    text-decoration: none;
+}
+
+h1 {
+    margin-bottom: 0px;
+    font-size: 40px;
+    font-family: 'PT Sans Narrow', sans-serif;
+}
+
+h2 {
+    margin-top: 0px;
+    font-size: 24px;
+    color: #192a56c4;
+    font-weight: lighter;
+    font-style: italic;
+}
+
+h4 {
+    margin-bottom: 0;
+}
+
+h5 {
+    margin-top: 10px;
+    font-weight: 100;
+    font-style: italic;
+}
+
+text, p, ul, li {
+    color:#273c75;
+}
+
+a {
+    color: #f0ffff;
+}
+
+.nome {
+    color:#192a56;
+    margin-top: 0px;
+}
+
+.foto {
+    margin: 0px 0px 0px 0px; /* espaçamento externo */
+    /* padding: 10px;  espaçamento interno*/ 
+    width: 200px;
+    border: 5px outset #f0ffff; /* shorthand */
+    border-radius: 50%;
+    /* box-shadow: 10px 10px rgba(0, 0, 0, 0.158); */
+    /*  
+    border-width: 5px;
+    border-style: outset;
+    border-color: #f0ffff;
+    */
+
+}
+
+#id-titulo {
+    color:#ffe4c4;
+}
+
+.footer {
+    background-color: #192a56;
+    margin-top: 50px;
+    height: 20px;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
