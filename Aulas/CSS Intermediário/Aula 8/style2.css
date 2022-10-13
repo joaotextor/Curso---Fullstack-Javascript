@@ -1,0 +1,15 @@
+.conteudo {
+    border: 1px solid black;
+    padding: 20px;
+    height: 500px;
+    position: relative; /* Makes that other child elements which have 'absolute' position are positioned relative to this element. */
+}
+
+.quadrado {
+    height: 50px;
+    width: 50px;
+    background: red;
+    position: absolute;
+    left: 50px;
+    bottom: 50px;
+}

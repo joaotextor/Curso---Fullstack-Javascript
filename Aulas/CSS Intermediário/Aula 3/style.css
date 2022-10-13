@@ -1,0 +1,13 @@
+/*a {
+    width: 150px;
+    height: 150px;
+    display: inline-block;
+} */
+ul {
+    background: green;
+    padding: 20px;
+}
+ul li {
+    display: inline;
+    margin: 0 20px;
+}

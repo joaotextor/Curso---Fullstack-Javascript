@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.quadrado {
+    position: fixed; /* Element is fixed in the screen, moving whie scrolling. */
+    bottom: 0; /* Sem distância do topo */
+    right: 0;
+    width: 50px;
+    height: 50px;
+    background: black;
+    color: white;
+    text-align: center;
+    font-size: 10px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+
+}
+
+.circulo {
+    position: absolute; /* Element is fixed on the page, not the screen */
+    top: 100px;
+    left: 100px;
+    width: 50px;
+    height: 50px;
+    background: red;
+    border-radius: 50px;
+    color: white;
+    text-align: center;
+    font-size: 10px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+p {
+    margin: 50px 500px;
+    font-size: 30px;
+}

@@ -1,0 +1,49 @@
+a {
+    color: red;
+}
+
+a:hover { /* Pseudo classe de 'a' */
+    color: blue;
+    font-weight: bold;
+}
+
+a:hover + .caixa { /* Changes the 'display' attribute of .caixa when hovering the anchor 'a'. + is to select sibling element */
+    display: block;
+}
+
+a:visited {
+    color: orange;
+}
+
+a:active {
+    color: pink;
+}
+
+.caixa {
+    display: none;
+     height: 150px;
+     width: 150px;
+     background: black;
+}
+
+.caixa:hover {
+    width: 10px;
+    height: 10px;
+    background: green;
+}
+
+ul li:first-child { /* Apply changes only on the first child (<li>) */
+    color:red;
+}
+
+ul li:last-child { /* Apply changes only on the last child (<li>) */
+    color:blue;
+}
+
+.exemplo1 p:first-child {
+    color: green;
+}
+
+.exemplo2 p:nth-child(5) { /* Apply chances only to the 'p' child number 'x' (in the case, the 5th) */
+    color: purple;
+}

@@ -1,0 +1,11 @@
+div {
+    width: 200px;
+    height: 200px;
+    background: yellow;
+    /*overflow: hidden;  Hide everything that overflows the size of <div>*/
+    /*overflow: scroll;  Keep all elements inside <div> visible, but create a a scroll */
+    /* overflow-x: hidden;  Hide all elements that overflows the x-axis. Also hide the scroll bar from x-axis */
+    overflow: auto; /* Creates scrollbars only where it's needed. */
+
+
+}

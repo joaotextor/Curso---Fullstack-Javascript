@@ -1,0 +1,37 @@
+::selection {
+    color: blue;
+    background: yellow;
+}
+
+p::first-line { /* Pseudo-element. Alters only a specific piece of the element. In this case, the first line. */
+    color: red;
+}
+
+p::first-letter {
+    color: blue;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+h1::before {
+    /*content: url("https://cdn-icons-png.flaticon.com/512/770/770706.png") - fica super grande*/
+    background: url("https://cdn-icons-png.flaticon.com/512/770/770706.png");
+    background-size: cover;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    display: inline-block;
+    content: "" /* content é obrigatório dentro do ::before. Portanto, mesmo se não for utilizado, deve-se colocar aspas vazias para ativar essa alteração */
+}
+
+h1::after {
+    /*content: url("https://cdn-icons-png.flaticon.com/512/770/770706.png") - fica super grande*/
+    background: url("https://cdn-icons-png.flaticon.com/512/770/770706.png");
+    background-size: cover;
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+    display: inline-block;
+    content: "" /* content é obrigatório dentro do ::before. Portanto, mesmo se não for utilizado, deve-se colocar aspas vazias para ativar essa alteração */
+}
+
