@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+    <form action="salvar.html" method="GET">
+        <!-- GET = Envia dados na URL | POST = envio escondido -->
+        <label for="nome">Nome: </label>
+        <input type="text" placeholder="Digite seu nome" name="edt_nome" value="" id="nome">
+
+        <br><br>
+
+        <label for="email">E-mail: </label>
+        <input type="email" placeholder="Digite seu email" name="edt_email" value="" id="email">
+
+        <br><br>
+
+        <label for="senha">Senha: </label>
+        <input type="password" placeholder="Digite sua senha" name="edt_password" value="" id="senha">
+
+        <br><br>
+
+        <label>Sexo:</label>
+        <br>
+
+        <input type="radio" name="rdSexo" value="masculino" id="masculino">
+        <label for="masculino">Masculino</label>
+        <br>
+
+        <input type="radio" name="rdSexo" value="feminino" id="feminino">
+        <label for="feminino">Feminino</label>
+        <br>
+
+        <input type="radio" name="rdSexo" value="naoinformou" id="naoinformou">
+        <label for="naoinformou">Prefiro não informar</label>
+
+        <br><br>
+
+        <label>Habilidades</label><br>
+        <input type="checkbox" name="habilidades" value="html" id="html">
+        <label for="html">HTML</label>
+        <br>
+        <input type="checkbox" name="habilidades" value="css" id="css">
+        <label for="css">CSS</label>
+        <br>
+        <input type="checkbox" name="habilidades" value="javascript" id="javascript">
+        <label for="javascript">Javascript</label>
+        <br>
+
+        <br>
+        <label>Cidade:</label><br>
+
+        <select name="cidade">
+            <option selected value="">-- Selecione a cidade --</option>
+            <option value="São Paulo">São Paulo</option>
+            <option value="Porto Alegre">Porto Alegre</option>
+            <option value="Curitiba">Curitiba</option>
+        </select>
+
+        <br>
+        <label>Carro:</label><br>
+
+        <select name="carro">
+            <option selected value="">-- Selecione o carro --</option>
+            <optgroup label="Honda">
+                <option value="Civic">Civic</option>
+            </optgroup>
+            <optgroup label="GM/Chevrolet">
+                <option value="Celta">Celta</option>
+            </optgroup>
+            <optgroup label="Fiat">
+                <option value="Uno">Uno</option>
+            </optgroup>            
+        </select>
+
+        <br><br>
+
+        <button>Enviar</button>
+        <!-- <input type="button" value="Enviar"> tag de versão antiga do HTML -->
+    </form>
+</body>
+
+</html>
