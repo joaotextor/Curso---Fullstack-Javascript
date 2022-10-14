@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: lightgrey;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.header {
+    display: flex;
+    box-shadow: 0 0 10px black;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    background-color: black;
+    padding: 0 20px;
+}
+
+.logo {
+    text-transform: lowercase;
+    letter-spacing: -3px;
+    color: white;
+}
+
+.logo span:first-child {
+    color: purple;
+}
+
+.logo span:last-child {
+    font-size: 12px;
+    letter-spacing: 0;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    font-size: 14px;
+}
+
+.menu li {
+    position: relative;
+
+}
+
+.menu li a {
+    padding: 17px;
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+.menu > li:hover {
+    background: purple;
+}
+
+.menu li:hover > .submenu,
+.submenu li:hover > .submenu {
+    display: block;
+}
+
+.submenu {
+    display: none;
+    list-style: none;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    min-width: 110%;
+    background: purple;
+}
+
+.submenu li {
+    position: relative;
+}
+
+.submenu li .submenu {
+    left: 100%;
+    top: 0;
+}
+
+.submenu li:hover {
+    background: rgb(94, 2, 94);
+}
