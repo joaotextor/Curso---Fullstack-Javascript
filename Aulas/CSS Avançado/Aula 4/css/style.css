@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    font-size: 12px
+}
+
+body {
+    font-size: 15px;
+}
+/*------------SECTION 1-------------*/
+.box {
+    height: 95vh; /* 100% do viewport height*/
+    width: 100vw; /* 100% do viewport width */
+    background: black;
+}
+/*------------SECTION 2-------------*/
+.box2 {
+    padding: 50px 0;
+    height: 100vh; /* 100% do viewport height*/
+    width: 100vw; /* 100% do viewport width */
+    background: rgb(255, 0, 0);
+}
+
+p {
+    width: 90%;
+    margin: 0;
+}
+
+p {
+    /*font-size: 1em;  equivale a 1x o tamanho definido para o font-size do elemento pai */
+    font-size: 2rem; /* equivale a 1x o tamanho definido para o font-size do root */
+}
