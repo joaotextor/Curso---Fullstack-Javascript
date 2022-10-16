@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 100vh;
+    /* justify-content: flex-end;  Align objects on the right corner */
+    /* justify-content: center;  Align objects on center of the screen */
+    justify-content: space-around; /* Adds a space only between objects */
+    /* justify-content: space-around; Adds a fixed margin around every object*/
+    /* justify-content: space-evenly;  Adds the same margin in the corners and between objects */
+    background: silver;
+    align-items: center /* center | flex-start | flex-end - Align itens on vertical (flex-direction: row) or  horizontal (flex-direction: column)*/;
+    align-content: flex-end; /* When using with wrap, get together the content - No effect while all objects are in a single line, only when wraps actually breaks the lines*/
+}
+
+.caixa {
+    width: 100px;
+    height: 100px;
+}
+
+.red {
+    background-color: red;
+}
+
+.blue {
+    background-color: blue;
+}
+
+.yellow {
+    background-color: yellow;
+}
+
+.green {
+    background-color: green;
+}

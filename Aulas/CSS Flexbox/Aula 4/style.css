@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 100vh;
+    /* justify-content: flex-end;  Align objects on the right corner */
+    /* justify-content: center;  Align objects on center of the screen */
+    justify-content: space-evenly; /* Adds a space only between objects */
+    /* justify-content: space-around; Adds a fixed margin around every object*/
+    /* justify-content: space-evenly;  Adds the same margin in the corners and between objects */
+    background: silver;
+}
+
+.caixa {
+    width: 100px;
+    height: 100px;
+}
+
+.red {
+    order: 0;
+    flex-grow: 0;  /* Padrão é 0 */
+    align-self: center; /* center | flex-start | flex-end | stretch | baseline*/
+    background-color: red;
+}
+
+.blue {
+    order: 1;
+    flex-grow: 1;  /* Padrão é 0 */
+    align-self: center; /* center | flex-start | flex-end | stretch | baseline*/
+    background-color: blue;
+}
+
+.yellow {
+    order: 2;
+    flex-grow: 2;
+    align-self: center; /* center | flex-start | flex-end | stretch | baseline*/
+    background-color: yellow;
+}
+
+.green {
+    align-self: center;
+    flex-grow: 3;
+    order: 3;
+    background-color: green;
+}

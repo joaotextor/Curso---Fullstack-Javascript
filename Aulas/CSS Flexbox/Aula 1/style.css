@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    /* flex-direction: row; -- propriedade padrão do flex é 'row' */
+    
+    /*flex-wrap: nowrap; --default property. Objects are resized to fit the screen (be the height or width, depending on the flex direction (row/column) */
+
+    flex-direction: row;
+    flex-wrap: wrap;  /* Put the elements on other lines when the viewport becomes smaller. Keep object size. */ 
+
+    /*flex-wrap: wrap-reverse; --Same as wrap, but invert object order when breaking lines*/ 
+
+    /* flex-flow: row wrap; Shorthand mode of flex property*/
+    
+    background: silver;
+}
+
+.caixa {
+    width: 250px;
+    height: 50px;
+}
+
+.red {
+    background-color: red;
+}
+
+.blue {
+    background-color: blue;
+}
+
+.yellow {
+    background-color: yellow;
+}
+
+.green {
+    background-color: green;
+}
