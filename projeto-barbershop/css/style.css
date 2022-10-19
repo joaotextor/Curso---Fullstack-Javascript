@@ -33,6 +33,7 @@ body {
     background-image: url(../images/bg-home.jpg);
     background-size: cover;
     position: relative;
+    background-attachment: fixed;
 }
 
 .home .header {
@@ -252,7 +253,7 @@ body {
     text-align: center;
     padding: 100px 0;
     justify-content: space-between;
-    background-color: var(--color-primary-light);
+    background-color: var(--color-primary-light);   
 }
 
 .services .content {
@@ -400,4 +401,72 @@ textarea {
 
 .gallery .gallery-wrapper div img {
     width: 100%;
+}
+
+
+/****************
+* LOCATION
+****************/
+
+.location {
+    padding: 100px 0;
+    background: url(../images/bg-location.jpg);
+    background-size: cover;
+}
+
+.location .head {
+    background-color: #191919;
+    display: flex;
+    padding: 50px 40px;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.location .info {
+    display: flex;
+    align-items: center;
+}
+
+.location .icon {
+    border: 1px solid var(--color-primary);
+    padding: 16px;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    margin-right: 15px;
+}
+
+.location .text {
+    color: var(--color-primary-light)
+}
+
+.location .text span {
+    display: block;
+    color: gray;
+}
+
+.location .map {
+    width: 100%;
+}
+
+.location .map iframe {
+    width: 100%;
+}
+
+
+
+/****************
+* FOOTER
+****************/
+
+footer {
+    display: flex;
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+    background-color: #191919;
+    color: var(--color-primary-light);
+    font-size: 15px;
 }
