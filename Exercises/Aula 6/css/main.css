@@ -1,0 +1,23 @@
+body {
+  font-size: 10px;
+}
+
+#box-content {
+  display: flex;
+  gap: 2em;
+}
+#box-content .atores {
+  background-color: lightgray;
+  padding: 2em 1em;
+  color: black;
+  border-radius: 0.2em;
+  box-shadow: 1.5px 1.5px 3px black;
+}
+#box-content .atores h1 {
+  font-weight: bold;
+  font-size: 2em;
+  margin: 0 0 0.5em 0;
+}
+#box-content .atores span {
+  font-size: 1em;
+}/*# sourceMappingURL=main.css.map */
