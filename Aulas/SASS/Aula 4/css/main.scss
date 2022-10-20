@@ -1,0 +1,53 @@
+@import 'base';
+@import 'variables';
+@import 'mixins'; // MIXIN is a function to override specific properties of elements.
+
+.container {
+    display: flex;
+    gap: 0.5em;
+    justify-content: space-around;
+
+
+    .box {
+        width: 30%;
+        padding: 2em;
+        color: $color-primary;
+        background-color: white;
+        border-radius: 0.8em;
+
+        &.active {
+            background-color: $color-secondary;
+        }
+
+        h2 {
+            font-family: $font-primary;
+            font-size: 3em;
+        }
+
+        p {
+            font-family: $font-secondary;
+            font-size: 1.8em;
+
+            &.hidden {
+                display: none;
+            }
+        }
+
+        ul {
+            @include reset-list();
+        }
+
+        a {
+            color: green;
+
+            &:hover {
+                color: yellow;
+
+                & + p.hidden {
+                    display: block;
+                }
+            }
+        }
+    }
+
+}

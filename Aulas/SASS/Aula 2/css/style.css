@@ -1,0 +1,39 @@
+body {
+  background-color: black;
+  font-family: sans-serif;
+  font-size: 10px;
+}
+
+.container {
+  display: flex;
+  gap: 0.5em;
+  justify-content: space-around;
+}
+.container .box {
+  width: 30%;
+  padding: 2em;
+  color: black;
+  background-color: white;
+  border-radius: 0.8em;
+}
+.container .box.active {
+  background-color: red;
+}
+.container .box h2 {
+  font-size: 3em;
+}
+.container .box p {
+  font-size: 1.8em;
+}
+.container .box p.hidden {
+  display: none;
+}
+.container .box a {
+  color: green;
+}
+.container .box a:hover {
+  color: yellow;
+}
+.container .box a:hover + p.hidden {
+  display: block;
+}/*# sourceMappingURL=style.css.map */

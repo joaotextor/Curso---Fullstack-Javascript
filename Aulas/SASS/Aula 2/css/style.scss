@@ -1,0 +1,49 @@
+body {
+    background-color: black;
+    font-family: sans-serif;
+    font-size: 10px;
+}
+
+.container {
+    display: flex;
+    gap: 0.5em;
+    justify-content: space-around;
+
+
+    .box {
+        width: 30%;
+        padding: 2em;
+        color: black;
+        background-color: white;
+        border-radius: 0.8em;
+
+        &.active {
+            background-color: red;
+        }
+
+        h2 {
+            font-size: 3em;
+        }
+
+        p {
+            font-size: 1.8em;
+
+            &.hidden {
+                display: none;
+            }
+        }
+
+        a {
+            color: green;
+
+            &:hover {
+                color: yellow;
+
+                & + p.hidden {
+                    display: block;
+                }
+            }
+        }
+    }
+
+}

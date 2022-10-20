@@ -1,0 +1,20 @@
+@mixin reset-list($margin:0, $spacement:0, $style:none) {
+    margin: $margin;
+    padding: $spacement;
+    list-style-type: $style;
+}
+
+// MIXIN is a function to override specific properties of elements.
+
+@mixin bg-effect($effect) {
+    @if $effect == 'success' {
+        background-color: green;
+    } @else if $effect == 'warning' {
+        background-color: yellow;
+        color: black;
+        } @else if $effect == 'danger' {
+            background-color: red;
+        } @else {
+            background-color: white;
+        }
+}
