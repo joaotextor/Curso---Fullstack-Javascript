@@ -1,0 +1,13 @@
+:root {
+  font-size: 10px;
+}
+
+span {
+  display: inline-block;
+  font-size: 2rem;
+}
+
+.botao {
+  height: 3rem;
+  width: 3rem;
+}/*# sourceMappingURL=main.css.map */

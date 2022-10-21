@@ -10,9 +10,10 @@ const intervalo = setInterval(() => {
     count == 0 ? titulo.innerHTML = "BOOM" : ''
 }, 10)
 
+const stop = () => {
+    clearInterval(intervalo)
+    contador.innerHTML = 'PAUSADO'
+}
 
 
-botaoPausar.addEventListener('click', () => {
-        clearInterval(intervalo)
-        contador.innerHTML = 'PAUSADO'
-    })
+botaoPausar.addEventListener('click', stop)

@@ -1,0 +1,28 @@
+.lblcidades {
+  margin-top: 5px;
+  display: none;
+}
+
+.cidadesVisivel {
+  display: block;
+}
+
+.inputError {
+  border-color: red;
+  color: red;
+}
+
+span {
+  display: none;
+}
+
+.error {
+  display: inline;
+  color: red;
+}
+
+#enviar {
+  position: absolute;
+  top: 60px;
+  display: block;
+}/*# sourceMappingURL=main.css.map */

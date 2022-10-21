@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/main.css" rel="stylesheet">
+    </head>
+    <body>
+        <form id='form' action="obrigado.html" method="GET">
+
+            <label>
+                Estado: 
+                <select id="estados">
+                    <option value="">-- Selecione o Estado --</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="SP">São Paulo</option>
+                </select>
+                <span>Por favor, selecione um Estado!</span>
+                
+            </label>
+            
+            <label class="lblcidades">
+                Cidades:
+                <select id="cidades" class="listaCidades">
+                    
+                </select>
+                <span>Por favor, selecione uma Cidade!</span>
+            </label>
+            
+            <button id="enviar" type="submit">Cadastrar</button>
+        </form>
+        <!--
+        ## SCRIPT IMPORT
+        -->
+        <script src="script.js"></script>
+    </body>
+</html>
