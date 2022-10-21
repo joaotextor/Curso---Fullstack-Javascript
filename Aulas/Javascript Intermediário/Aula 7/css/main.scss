@@ -1,0 +1,16 @@
+.toast {
+    display: inline-block;
+    position: absolute;
+    left: -100%;
+    bottom: 30px;
+    padding: 10px 5px;
+    background: #b5d3b5;
+    border: 1px solid #008000;
+    border-radius: 5px;
+    color: green;
+    transition: all 600ms ease;
+
+    &.visible {
+        left: 30px;
+    }
+}
