@@ -1,0 +1,22 @@
+/*
+
+* ESCOPO
+
+* GLOBAL
+* LOCAL
+
+! O ESCOPO DETERMINA A VISIBILIDADE DE UMA VARIÁVEL
+
+! AS FUNÇÕES NO JS CRIAM SEU PRÓPRIO ESCOPO
+! - AS VARIÁVEIS DE UMA FUNÇÃO NÃO SÃO ACESSÍVEIS FORA DELA
+! - TUDO O QUE FOR DECLARADO ENTRE CHAVES {} FICA DENTRO DAQUELE ESCOPO
+
+*/
+
+function teste() {
+    let a = 123 //BP: DECLARA NO ESCOPO DA FUNÇÃO - LIMPA DA MEMÓRIA APÓS A FUNÇÃO SER EXECUTADA
+    //! a = 123 DECLARA NO ESCOPO GLOBAL (sem o "let") - não recomendado
+    console.log(a) //~ ASSIM FUNCIONA (a não ser que não usado o "let")
+}
+console.log(a) //! ASSIM NÃO FUNCIONA
+teste()
