@@ -1,0 +1,11 @@
+.hidden {
+    display: none;
+}
+
+.shown {
+    display: inline;
+}
+
+.img {
+    width: 25px;
+}

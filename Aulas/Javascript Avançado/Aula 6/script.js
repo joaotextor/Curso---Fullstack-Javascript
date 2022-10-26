@@ -34,7 +34,7 @@ const clientes = [
 //acc = accumulator
 //curr = current
 
-//* The reduce function works with 2 params: first, a function to run over the elements and a property that will contain the results inside the accumulatir
+//* The reduce function works with 2 params: first, a function to run over the elements and a property that will contain the results inside the accumulator
 const clientesFinal = clientes.reduce((acc, curr) => {
     curr.score >= 50 ? acc.pass.push(curr) : acc.fail.push(curr)
 
