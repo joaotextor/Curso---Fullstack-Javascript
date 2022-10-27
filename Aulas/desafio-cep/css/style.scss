@@ -1,0 +1,24 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    form {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.inputText {
+    padding: 2px;
+    margin: 2px 0;
+}
+
+#cep {
+    width: 60px;
+}
+
+#uf {
+    width: 25px;
+}
