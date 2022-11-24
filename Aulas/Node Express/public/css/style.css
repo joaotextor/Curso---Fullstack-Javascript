@@ -1,0 +1,107 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+header {
+    background-image: url('../src/header-banner.jpg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    text-align: center;
+    padding:  0;
+    font-size: 40px;
+    box-shadow:
+        0px 0.6px 1.8px rgba(0, 0, 0, 0.13),
+        0px 1.5px 3.6px rgba(0, 0, 0, 0.167),
+        0px 2.8px 5.5px rgba(0, 0, 0, 0.183),
+        0px 4.9px 8px rgba(0, 0, 0, 0.192),
+        0px 9.2px 12.3px rgba(0, 0, 0, 0.197),
+        0px 22px 25px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+}
+
+.logo {
+    background-image: url('../src/ps-logo.webp');
+    background-repeat: no-repeat;
+    background-size: 15%;
+    background-position: 50%;
+    width: 100%;
+    height: 200px;
+}
+
+.header_bg {
+    background-color: rgb(0,0,0, 0.8);
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+footer {
+    background-color: aqua;
+    position: relative;
+    padding: 10px;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.navbar {
+    padding: 15px;
+    margin: 0 10px;
+    width: 25%;
+    background: rgb(182, 255, 255);
+}
+
+.navbar ul {
+    list-style: none;
+    
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: black;
+    transition: color 0.5s;
+}
+
+.navbar ul li a:hover {
+    color: aliceblue;
+}
+
+.btn_menu {
+    background-color: rgb(0, 102, 255);
+    font-size: 18px;
+    text-align: center;
+    border-style: none;
+    border-radius: 0 10px 0 10px / 0 10px 0 10px;
+    padding: 5px;
+    margin: 5px 0;
+    box-shadow:
+    0px 0.6px 1.8px rgba(0, 0, 0, 0.13),
+    0px 1.5px 3.6px rgba(0, 0, 0, 0.167),
+    0px 2.8px 5.5px rgba(0, 0, 0, 0.183),
+    0px 4.9px 8px rgba(0, 0, 0, 0.192),
+    0px 9.2px 12.3px rgba(0, 0, 0, 0.197),
+    0px 22px 25px rgba(0, 0, 0, 0.2);
+margin-bottom: 20px;
+}
+
+.content {
+    padding: 15px;
+    border-style: none;
+    border-radius: 0 25px 0 25px / 0 25px 0 25px;
+    margin: 0 10px 0 0;
+    width: 75%;
+    background: rgb(207, 207, 207);
+}
+
+.content img {
+    width: 300px;
+}
