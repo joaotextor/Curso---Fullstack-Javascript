@@ -9,7 +9,7 @@ body {
 }
 
 header {
-    background-image: url('../src/header-banner.jpg');
+    background-image: url('../images/header-banner.jpg');
     background-repeat: no-repeat;
     background-size: 100%;
     text-align: center;
@@ -25,8 +25,20 @@ header {
     margin-bottom: 20px;
 }
 
+article h1 {
+    margin-bottom: 1rem;
+}
+
+.post > * {
+    margin-bottom: .5rem;
+}
+
+.star-icon {
+    width: 20px;
+}
+
 .logo {
-    background-image: url('../src/ps-logo.webp');
+    background-image: url('../images/ps-logo.webp');
     background-repeat: no-repeat;
     background-size: 15%;
     background-position: 50%;
@@ -100,8 +112,4 @@ margin-bottom: 20px;
     margin: 0 10px 0 0;
     width: 75%;
     background: rgb(207, 207, 207);
-}
-
-.content img {
-    width: 300px;
 }

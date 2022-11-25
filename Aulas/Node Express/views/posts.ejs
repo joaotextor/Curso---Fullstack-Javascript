@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <%- include('partials/head.ejs') %>
+    </head>
+    <body>
+        <%- include('partials/header.ejs')%>
+
+        <section class="container">
+            <%- include('partials/navbar.ejs')%>
+
+            <article class="content">
+                <h1>Posts</h1>
+                <div class="posts">
+                <% posts.forEach((post) => { %>
+                    <div class="post">
+                        <h3><%= post.title%></h3>
+                        <% if (post.stars) { %>
+                            <% for (let i=0; i < post.stars; i++) { %>
+                            <img class="star-icon" src="images/star-icon.svg" alt="star">
+                            <% } %>
+                        <% } %>
+                        <p><%= post.text%></p>
+                    </div>
+                <% }) %>
+                </div>
+            </article>
+        </section>
+        <%- include('partials/footer.ejs')%>
+    </body>
+</html>
