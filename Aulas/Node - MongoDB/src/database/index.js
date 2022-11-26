@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 
 const connect = () => {
-    mongoose.connect('mongodb://127.0.0.1:27017/', {useUnifiedTopology: true})
+    mongoose.connect('mongodb://127.0.0.1:27017/projeto-crud', {useUnifiedTopology: true})
     
     const db = mongoose.connection
     db.once('open', () => {
