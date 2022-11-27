@@ -9,7 +9,7 @@
         <ul>
         <% users.forEach((user) => { %>
             <li>
-                <%= user.name%> | <%= user.age%> anos | <%= user.email%> <a href="/edit?id=<%= user._id%>">>> Editar <<</a>
+                <%= user.name%> | <%= user.age%> anos | <%= user.email%> - <a href="/edit?id=<%= user._id%>">>> Editar <<</a> - <a href="/remove/<%= user._id%>">>> Apagar <<</a>
             </li>
         <%}) %>
         </ul>

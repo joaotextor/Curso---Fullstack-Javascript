@@ -77,8 +77,13 @@ const edit = async (req, res) => {
 
 }
 
-const remove = () => {
+const remove = async (req, res) => {
+    const {id} = req.params
+    const remove = await CustomersModel.deleteOne({ _id: id })
 
+    if (remove.acknowledged) {
+        res.redirect('/list')        
+    }
 }
 
 module.exports = {
