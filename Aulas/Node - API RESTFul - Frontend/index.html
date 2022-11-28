@@ -4,7 +4,7 @@
         <title></title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="css/style.css" rel="stylesheet">
+        <link href="style.css" rel="stylesheet">
         <script src="script.js" defer></script>
     </head>
     <body>
@@ -34,6 +34,30 @@
             </div>
             <button type="submit">Cadastrar</button>
         </form>
+
+        <div class="formEdit hidden">
+            <hr>
+            <h2>Alterar Produto</h2>
+            <form id="formEdit">
+                <input type="hidden" name="id">
+                <div>
+                    <label>Nome: 
+                        <input type="text" name="name" id="name" placeholder="Digite o nome do produto...">
+                    </label>
+                </div>
+                <div>
+                    <label>Marca: 
+                        <input type="text" name="brand" id="brand" placeholder="Digite a marca do produto...">
+                    </label>
+                </div>
+                <div>
+                    <label>Preço: 
+                        <input type="text" name="price" id="price" placeholder="Digite o preço do produto...">
+                    </label>
+                </div>
+                <button type="submit">Alterar</button>
+            </form>
+        </div>
     
     </body>
 </html>
