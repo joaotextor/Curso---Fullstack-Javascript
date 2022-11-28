@@ -1,3 +1,4 @@
+const { response } = require('express')
 const ProductsModel = require('../modules/products')
 
 const get = async (req, res) => {
@@ -8,6 +9,29 @@ const get = async (req, res) => {
     res.send(products)
 }
 
+const post = async (req, res) => {
+  const {
+    name,
+    brand,
+    price
+  } = req.body
+
+  console.log(req.body)
+
+  const product = new ProductsModel({
+    name,
+    brand,
+    price
+  })
+
+  product.save()
+
+  res.send({
+    message: 'success'
+  })
+} 
+
 module.exports = {
-  get
+  get,
+  post
 }
