@@ -1,4 +1,4 @@
-import * as React from 'react'
+import { useState } from 'react'
 import {
   Card,
   CardHeader,
@@ -9,8 +9,10 @@ import {
 
 import { red } from '@mui/material/colors'
 
-import FavoriteIcon from '@mui/icons-material/Favorite'
-import ShareIcon from '@mui/icons-material/Share'
+import EditIcon from '@mui/icons-material/Edit'
+import DeleteIcon from '@mui/icons-material/Delete'
+
+import ModalConfirm from './ModalConfirm'
 
 export default function CustomerCard({
   name,
@@ -19,7 +21,23 @@ export default function CustomerCard({
   avatar
 }) {
 
+const [openModal, setOpenModal] = useState(false)
+
+const handleToggleOpenModal = () => {
+  setOpenModal(!openModal)
+}
+
+const handleConfirmModal = () => {
+  handleToggleOpenModal()
+  alert('ok')
+}
+
+const handleRemoveCustomer = () => {
+  handleToggleOpenModal()
+}
+
   return (
+    <>
     <Card sx={{ maxWidth: 345 }}>
       <CardHeader
         avatar={
@@ -32,12 +50,20 @@ export default function CustomerCard({
       />
       <CardActions disableSpacing>
         <IconButton aria-label="add to favorites">
-          <FavoriteIcon />
+          <EditIcon />
         </IconButton>
-        <IconButton aria-label="share">
-          <ShareIcon />
+        <IconButton aria-label="share" onClick={handleRemoveCustomer}>
+          <DeleteIcon />
         </IconButton>
       </CardActions>
     </Card>
+    <ModalConfirm
+      open={openModal}
+      onClose={handleToggleOpenModal}
+      onConfirm={handleConfirmModal}
+      title={"Delete Confirmation"} 
+      message={"Coforme customer removal?"}
+    />
+    </>
   )
 }
