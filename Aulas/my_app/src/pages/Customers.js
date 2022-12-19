@@ -7,8 +7,6 @@ import CustomerCard from '../components/CustomerCard'
 export default function Home() {
     const [customers, setCustomers] = useState([])
 
-    console.log(customers)
-
     useEffect(() => {
         axios.get('https://reqres.in/api/users')
             .then(response => {

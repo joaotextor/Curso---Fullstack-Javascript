@@ -14,13 +14,13 @@ import Customers from './pages/Customers'
 
 export default function App() {
   return (
-    <TemplateDefault>
-      <Router>
+    <Router>
+        <TemplateDefault>
         <Routes>
           <Route path="/" element={<TemplatePage title={"Home"} Component={Home}/>}/>
           <Route path="/customers" element={<TemplatePage title={"Customers"} Component={Customers}/>}/>
         </Routes>
-      </Router>
     </TemplateDefault>
+      </Router>
   )
 }
