@@ -22,6 +22,7 @@ import {
 
 import MenuIcon from '@mui/icons-material/Menu'
 import HomeIcon from '@mui/icons-material/Home'
+import PersonIcon from '@mui/icons-material/Person'
 import PersonAddIcon from '@mui/icons-material/PersonAdd';
 
 import { defaultTheme } from '../../themes/defaultTheme.js'
@@ -66,6 +67,7 @@ export default function Header() {
       </Box>
       <Drawer open={menuOpen} onClose={() => handleToggleMenu()}>
         <List>
+          
           <ListItem key="home">
             <ListItemButton onClick={() => handleMenuClick("/")}>
               <ListItemIcon >
@@ -76,8 +78,20 @@ export default function Header() {
               </ListItemText>
             </ListItemButton>
           </ListItem>
+
           <ListItem key="customers">
             <ListItemButton onClick={() => handleMenuClick("/customers")}>
+              <ListItemIcon>
+                <PersonIcon />
+              </ListItemIcon>
+              <ListItemText>
+                Customers
+              </ListItemText>
+            </ListItemButton>
+          </ListItem>
+
+          <ListItem key="customers-add">
+            <ListItemButton onClick={() => handleMenuClick("/customers/add")}>
               <ListItemIcon>
                 <PersonAddIcon />
               </ListItemIcon>
@@ -86,6 +100,7 @@ export default function Header() {
               </ListItemText>
             </ListItemButton>
           </ListItem>
+
         </List>
       </Drawer>
     </ThemeProvider>
