@@ -15,10 +15,12 @@ import DeleteIcon from '@mui/icons-material/Delete'
 import ModalConfirm from './ModalConfirm'
 
 export default function CustomerCard({
+  id,
   name,
   lastname,
   email,
-  avatar
+  avatar,
+  onRemoveCustomer,
 }) {
 
 const [openModal, setOpenModal] = useState(false)
@@ -27,9 +29,9 @@ const handleToggleOpenModal = () => {
   setOpenModal(!openModal)
 }
 
-const handleConfirmModal = () => {
+const handleConfirmModal = id => {
+  onRemoveCustomer(id)
   handleToggleOpenModal()
-  alert('ok')
 }
 
 const handleRemoveCustomer = () => {
@@ -60,7 +62,7 @@ const handleRemoveCustomer = () => {
     <ModalConfirm
       open={openModal}
       onClose={handleToggleOpenModal}
-      onConfirm={handleConfirmModal}
+      onConfirm={() => handleConfirmModal(id)}
       title={"Delete Confirmation"} 
       message={"Coforme customer removal?"}
     />
