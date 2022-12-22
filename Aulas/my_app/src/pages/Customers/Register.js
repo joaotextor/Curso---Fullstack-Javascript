@@ -122,8 +122,8 @@ export default function Register() {
                 />
             </div>
             <div>
-                <Button variant="contained" sx={classes.inputs} onClick={handleRegisterButton}>
-                    { isLoading ? <CircularProgress size={24} sx={{color: red[100]}}
+                <Button variant="contained" sx={classes.inputs} onClick={handleRegisterButton} disabled={isLoading}>
+                    { isLoading ? <CircularProgress size={24} sx={{color: red[400]}}
                     /> : 'Register'}
                     </Button>
             </div>
