@@ -4,6 +4,11 @@ import axios from 'axios'
 import TextField from '@mui/material/TextField'
 import Button from '@mui/material/Button'
 
+import Toasty from '../../components/Toasty'
+
+import CircularProgress from '@mui/material/CircularProgress'
+
+import { red } from '@mui/material/colors'
 
 const classes = {
     inputs: {
@@ -27,6 +32,14 @@ export default function Register() {
         }
     })
 
+    const [toastyOpen, setToastyOpen] = useState({
+        open: false,
+        message: '',
+        severity: '',
+    })
+
+    const [isLoading, setIsLoading] = useState(false)
+
     const handleInputChange = (e) => {
         const { name, value } = e.target
 
@@ -39,6 +52,7 @@ export default function Register() {
     }
 
     const handleRegisterButton = () => {
+        setIsLoading(true)
         let hasError = false
         const newFormState = {
             ...form,
@@ -70,7 +84,15 @@ export default function Register() {
             name: form.name.value,
             job: form.job.value
         })
-            .then(response => { console.log(response)})
+            .then(response => {
+                setIsLoading(false)
+                setToastyOpen({
+                    ...toastyOpen,
+                    open: true,
+                    message: 'Cadastro realizado com sucesso!',
+                    severity: 'success'
+                })
+            })
     }
 
     return (
@@ -100,9 +122,12 @@ export default function Register() {
                 />
             </div>
             <div>
-                <Button variant="contained" sx={classes.inputs} onClick={handleRegisterButton}>Register</Button>
+                <Button variant="contained" sx={classes.inputs} onClick={handleRegisterButton}>
+                    { isLoading ? <CircularProgress size={24} sx={{color: red[100]}}
+                    /> : 'Register'}
+                    </Button>
             </div>
-
+        <Toasty severity={toastyOpen.severity} message={toastyOpen.message} open={toastyOpen.open} />
         </>
     )
 }
