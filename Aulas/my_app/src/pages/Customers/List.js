@@ -1,6 +1,10 @@
 import { useState, useEffect } from 'react'
 import axios from 'axios'
 import Grid from '@mui/material/Grid'
+import { 
+    useNavigate
+  } from 'react-router-dom'
+
 
 import CustomerCard from '../../components/CustomerCard'
 
@@ -27,6 +31,14 @@ export default function Customers() {
             })
     }
 
+    const navigate = useNavigate()
+
+    const handleEditCustomer = id => {
+        navigate(`/customers/edit/${id}`)
+    }
+
+
+
     return (
         <Grid container spacing={2} sx={{paddingTop: 5}}>
         {
@@ -40,6 +52,7 @@ export default function Customers() {
                             email={item.email}
                             avatar={item.avatar}
                             onRemoveCustomer={handleRemoveCustomer}
+                            onEditCustomer={handleEditCustomer}
                         />
                     </Grid>
             ))

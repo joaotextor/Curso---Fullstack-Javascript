@@ -21,6 +21,7 @@ export default function CustomerCard({
   email,
   avatar,
   onRemoveCustomer,
+  onEditCustomer,
 }) {
 
 const [openModal, setOpenModal] = useState(false)
@@ -38,6 +39,10 @@ const handleRemoveCustomer = () => {
   handleToggleOpenModal()
 }
 
+const handleEditCustomer = id => {
+  onEditCustomer(id)
+}
+
   return (
     <>
     <Card sx={{ maxWidth: 345 }}>
@@ -51,7 +56,7 @@ const handleRemoveCustomer = () => {
         subheader={email}
       />
       <CardActions disableSpacing>
-        <IconButton aria-label="add to favorites">
+        <IconButton aria-label="add to favorites" onClick={() => handleEditCustomer(id)}>
           <EditIcon />
         </IconButton>
         <IconButton aria-label="share" onClick={handleRemoveCustomer}>

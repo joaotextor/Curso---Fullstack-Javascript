@@ -23,7 +23,7 @@ import {
 import MenuIcon from '@mui/icons-material/Menu'
 import HomeIcon from '@mui/icons-material/Home'
 import PersonIcon from '@mui/icons-material/Person'
-import PersonAddIcon from '@mui/icons-material/PersonAdd';
+import PersonAddIcon from '@mui/icons-material/PersonAdd'
 
 import { defaultTheme } from '../../themes/defaultTheme.js'
 import { styles } from './Header.style'
