@@ -58,9 +58,6 @@ export default function Edit() {
     }, [])
 
 
-
-
-
     const handleInputChange = (e) => {
         const { name, value } = e.target
 
