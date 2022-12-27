@@ -1,4 +1,3 @@
-import Button from '@mui/material/Button'
 import Snackbar from '@mui/material/Snackbar'
 import MuiAlert from '@mui/material/Alert'
 
@@ -15,7 +14,6 @@ export default function Toasty({ open, message, severity, onClose }) {
 
   return (
     <>
-      <Button onClick={handleClose}>Open simple snackbar</Button>
       <Snackbar
         open={open}
         autoHideDuration={6000}
