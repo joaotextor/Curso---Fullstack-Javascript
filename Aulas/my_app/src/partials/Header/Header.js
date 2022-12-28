@@ -28,7 +28,7 @@ import PersonAddIcon from '@mui/icons-material/PersonAdd'
 import { defaultTheme } from '../../themes/defaultTheme.js'
 import { styles } from './Header.style'
 
-export default function Header() {
+export default function Header({ user }) {
   
   const navigate = useNavigate()
 
@@ -61,7 +61,11 @@ export default function Header() {
             <Typography variant="h6" component="div" sx={styles.title}>
               Home
             </Typography>
-            <Button color="inherit">Login</Button>
+            {
+              user.logged 
+              ? <Typography variant="h6">{user.email}</Typography>
+              : <Button color="inherit">Login</Button>
+            }
           </Toolbar>
         </AppBar>
       </Box>

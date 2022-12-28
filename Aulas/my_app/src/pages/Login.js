@@ -1,11 +1,17 @@
 import { useState } from 'react'
 import { 
+    useNavigate
+  } from 'react-router-dom'
+
+import { 
     Typography,
     TextField,
     Button,
 } from "@mui/material"
 
 import { styled } from "@mui/material/styles"
+
+import useAuth from '../state/auth'
 
 
 const Wrapper = styled('div')`
@@ -19,6 +25,12 @@ export default function Login() {
         password: '',
     })
 
+    const { user, setUser } = useAuth()
+
+    const [isLoading, setIsLoading] = useState(false)
+
+    const navigate = useNavigate()
+
     const handleInputChange = (e) => {
         const { name, value } = e.target
 
@@ -29,7 +41,23 @@ export default function Login() {
     }
 
     const handleFormSubmit = () => {
-        console.log(form)
+        setIsLoading(true)
+        setTimeout(() => {
+            const response = {
+                success: true,
+                user: {
+                    email: form.email,
+                }
+            }
+
+            setUser({
+                logged: response.success,
+                email: form.email
+            })
+
+            navigate('/')
+
+        }, 3000)
     }
 
     return (
@@ -57,7 +85,11 @@ export default function Login() {
             </Wrapper>
 
             <Wrapper>
-                <Button variant="contained" color="primary" onClick={handleFormSubmit}>Login</Button>
+                <Button variant="contained" color="primary" onClick={handleFormSubmit}>
+                    {
+                        isLoading ? 'Loading...' : 'Login'
+                    }
+                </Button>
             </Wrapper>
         </>
     )

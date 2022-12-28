@@ -6,11 +6,15 @@ import { ThemeProvider } from '@mui/material/styles'
 import { defaultTheme } from './themes/defaultTheme'
 import './index.css'
 
+import { AuthProvider } from './state/auth'
+
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
   <React.StrictMode>
     <ThemeProvider theme={defaultTheme}>
-      <App />
+      <AuthProvider>
+        <App />
+      </AuthProvider>
     </ThemeProvider>
   </React.StrictMode>
 )
